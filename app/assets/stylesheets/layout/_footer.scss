@@ -1,1 +1,26 @@
-// Your footer style
+#footer {
+  background: $gray-dark;
+  padding: 6px;
+  color: #CCCCCC;
+}
+#footer p {
+  margin-top: 10px;
+}
+#footer ul {
+  margin-top: 10px;
+}
+#footer a {
+  color: $gray-lighter;
+  font-size: 14px;
+  transition: color 0.5s ease;
+  text-decoration: underline;
+}
+
+.footerbox {
+  display: flex;
+  justify-content: space-between;
+
+  .nodeco {
+      text-decoration: none !important;
+  }
+}

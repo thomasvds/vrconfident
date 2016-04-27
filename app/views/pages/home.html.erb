@@ -1,2 +1,155 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<script type="text/javascript">
+  // Navbar appearance, has to be loaded first
+  $('.navbar-wagon-link').addClass("unscrolled")
+  $('.navbar-wagon-button').addClass("unscrolled")
+  $('.navicon').addClass("unscrolled")
+  $('.navicon-small').addClass("unscrolled")
+</script>
+
+<!-- BANNER -->
+
+<div class="banner" style="background-image: linear-gradient(-200deg, rgba(0,0,0,0.5) 5%, rgba(0,0,0,0.1) 100%), url(http://s3-eu-west-1.amazonaws.com/fovento/images/banner.jpg);">
+
+  <div class="banner-top"> </div>
+
+  <div class="banner-title text-center">
+    <h1 id="headline">WE'VE ALL BEEN THERE</h1>
+  </div>
+
+  <div class="banner-description">
+    <p id="intro">...and let's admit it feels a bit scary sometimes. Now, what if Virtual Reality could help you train and boost your confidence in public speaking?</p>
+  </div>
+
+  <div class="banner-bottom">
+    <div class="angle-down">
+      <i class="fa fa-angle-down" id="scrollarrow"></i>
+    </div>
+  </div>
+  <div class="scrollanchor" id="scrollanchor"></div>
+
+</div>
+
+<!---         WHAT               -->
+<div class="wrapper" id="whatid">
+  <div class="container text-center padded" >
+
+
+    <div class="tagline"><h2>VRConfident brings your public speaking abilities to the next level</h2></div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <div class="feature-holder">
+          <div class= "flipcard">
+            <div class="front">
+              <div class="feature">
+                <%= image_tag("impact.png") %>
+                <h2>IMPACT</h2>
+                <p>Accomplis des missions avec des associations soutenant les causes qui t'inspirent</p>
+              </div>
+            </div>
+            <div class="back">
+              <div class="featureback">
+                <div class="figure">10+</div>
+                <%= image_tag("impactback.png") %>
+                <p>Soutiens plus d'une dizaine d'ASBLs,
+                  actives en Belgique et à Bruxelles en
+                  particulier</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+          <div class="feature-holder">
+            <div class= "flipcard">
+              <div class="front">
+                <div class="feature">
+                  <%= image_tag("technology.png") %>
+                  <h2>CHALLENGE</h2>
+                  <p>Les missions font appel au meilleur de tes compétences intellectuelles et humaines</p>
+                </div>
+              </div>
+              <div class="back">
+                <div class="featureback">
+                  <%= image_tag("challengeback.png") %>
+                  <p>Management, Comm', RH, Design, Finance, IT...toutes les compétences sont bienvenues!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+          <div class="feature-holder">
+            <div class= "flipcard">
+              <div class="front">
+                <div class="feature">
+                  <%= image_tag("arrows (1).png") %>
+                  <h2>FLEXIBILITÉ</h2>
+                  <p>Trouve des missions courtes à la demande, sans contraintes à long terme</p>
+                </div>
+              </div>
+              <div class="back">
+                <div class="featureback">
+                  <%= image_tag("timeback.png") %>
+                  <p>3 heures suffisent déjà! C'est moins que ton temps mensuel à regarder des photos de chats sur le web</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="container padded timelinewrapper">
+      <div class="tagline"><h2>Un modèle simple et efficace</h2></div>
+      <%= render 'pages/home/timeline' %>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="applybox padded">
+      <div class="tagline" style="color: white;"><h1>QUEL SERA TON IMPACT?</h1></div>
+      <div class="btn-box">
+        <%= link_to 'VOIR LES MISSIONS', root_path, class: 'apply-btn btn' %>
+      </div>
+    </div>
+  </div>
+
+
+  <% content_for :javascript do %>
+  <script>
+
+  // Title dynamic resizing
+  $("#headline").fitText(0.8, { minFontSize: '40px', maxFontSize: '70px' });
+  $("#intro").fitText(1, { minFontSize: '10px', maxFontSize: '21px' });
+
+  // Banner downarrow effects
+  $("#scrollarrow").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#scrollanchor").offset().top
+    }, 1500);
+  });
+  function pulse(){
+    if($(window).scrollTop() < 100) {
+      $("#scrollarrow").animate({fontSize: "+=15"}, 700);
+      $("#scrollarrow").animate({fontSize: "-=15"}, 700).delay(3000);
+    }
+  }
+  setInterval(pulse, 3000);
+
+  // Flipping of feature cards
+  $(".flipcard").flip({
+    trigger: 'click'
+  });
+
+</script>
+<% end %>
+
+
+
+
+
+

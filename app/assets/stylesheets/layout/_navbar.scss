@@ -2,12 +2,33 @@
 .navbar-wagon {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
+  opacity: 0.99;
   transition: all 0.3s ease;
   display: flex;
   height: 70px;
   padding: 0px 30px;
   align-items: center;
+  position: relative;
   justify-content: space-between;
+
+  &:after {
+    transform: translateY(-100%);
+    transition: transform .6s ease;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    bottom: 0;
+    content: '';
+    background: white;
+    position: absolute;
+    top: 0;
+  }
+
+  &.is-scrolling {
+    &:after {
+      transform: translateY(0);
+    }
+  }
 }
 
 /* Optional class to fix the navbar on top */
@@ -15,13 +36,13 @@
   position: fixed;
   left: 0px;
   top: 0px;
-  z-index: 1;
+  z-index: 1000;
   width: 100%;
 }
 
 /* Navbar logo */
 .navbar-wagon-brand img {
-  width: 50px;
+  width: 100px;
 }
 
 /* Navbar right section (with form, links, button) */
@@ -40,11 +61,11 @@
 
 /* Navbar standard link */
 .navbar-wagon-link {
-  color: #616668;
-  font-size: 14px;
+  color: $gray;
+  font-size: 18px;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: $primary;
   text-decoration: none;
 }
 
@@ -52,17 +73,15 @@
 .navbar-wagon-button {
   margin-left: 10px;
   padding: 0 20px;
-  border-radius: 20em;
+  border-radius: 5px;
   line-height: 40px;
-  background-color: #D23333;
-  color: white;
-  font-size: 14px;
-  border: 2px solid #D23333;
+  color: $primary;
+  font-size: 16px;
+  border: 2px solid $primary;
 }
 .navbar-wagon-button:hover {
   color: white;
-  background: #D23333;
-  border-color: #ac2626;
+  background: $primary;
 }
 
 /* Navbar search form */
@@ -128,4 +147,55 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.navicon {
+  font-size: 40px;
+  color: $gray;
+  cursor: pointer;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.navicon-small {
+  font-size: 20px;
+  color: $gray;
+  cursor: pointer;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.pages-home {
+  .navicon {
+    &.unscrolled {
+      color: white;
+    }
+  }
+  .navicon-small {
+    &.unscrolled {
+      color: white;
+    }
+  }
+  .navbar-wagon {
+    background: transparent;
+    box-shadow: none;
+    // margin-bottom: -70px;
+  }
+  .navbar-wagon-link {
+    &.unscrolled {
+      color: white;
+    }
+  }
+  .navbar-wagon-button {
+    &.unscrolled {
+      color: white;
+      border-color: white;
+      &:hover {
+        background: white;
+        color: rgba(22, 45, 74, 1);
+      }
+    }
+  }
 }

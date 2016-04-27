@@ -23,3 +23,44 @@
 .bg-dark-blue {
   background: #3b5998;
 }
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  color: $gray-dark;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  background-color: $gray-lightest;
+  padding-top: 70px;
+}
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+p{
+  font-size: 14px;
+}
+
+.padded {
+  padding: 20px 20px;
+}
+
+.gray {
+  color: $gray;
+}
+
+.wrapper-gray {
+  background-color: $gray-lightest;
+}
+
+.site-content {
+  flex: 1;
+}
+

@@ -1,15 +1,15 @@
-// Graphical variables
+// General Style Variables
 @import "config/variables";
 @import "config/bootstrap_variables";
 
-// External libraries
+// External Frameworks
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-// Your CSS
-@import "layout/index";
-@import "components/index";
-@import "pages/index";
-@import "vendor/index";
+// Our CSS
+@import "layout/*";
+@import "components/*";
+@import "pages/*";
+@import "vendor/*";

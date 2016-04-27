@@ -1,0 +1,56 @@
+.form-banner {
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: calc(100vh - 70px);
+}
+
+.form-box {
+
+  max-width: 700px;
+
+  .background{
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+  }
+
+  .form{
+    padding: 30px;
+    color: $gray;
+    h2 {
+      color: $primary-light;
+      text-align: center;
+    }
+    p {
+      font-size: 14px;
+      color: $gray;
+    }
+
+    h3 {
+      font-size: 16px;
+      color: $primary-light;
+      margin-top: 3px;
+    }
+
+    li {
+      font-size: 14px;
+      color: $gray;
+    }
+
+    .form-hint {
+      p {
+        font-size: 12px;
+        color: $gray;
+        font-style: italic;
+      }
+    }
+
+    .form_options a {
+      text-decoration: none;
+      color: $gray;
+      font-size: 14px;
+    }
+  }
+
+}
