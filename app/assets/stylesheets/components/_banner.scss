@@ -11,8 +11,8 @@
   position: relative;
   // USED FOR SCROLL TO BOTTOM
   .scrollanchor {
-  position: absolute;
-  bottom: 70px; //HEIGHT OF THE NAVBAR
+    position: absolute;
+    bottom: 70px; //HEIGHT OF THE NAVBAR
   }
 }
 
@@ -38,18 +38,17 @@
 
 .banner-description {
   flex: 1 0 auto;
-  width: 45%;
+  width: 50%;
 
   p {
-    font-weight: lighter;
-    // font-size: 21px;
+    font-size: 21px;
   }
 }
 
 .banner-bottom {
   flex: 0 0 10%;
   .angle-down{
-    font-size: 45px;
+    font-size: 50px;
     transition: 0.5s ease;
     cursor: pointer;
     &:hover {

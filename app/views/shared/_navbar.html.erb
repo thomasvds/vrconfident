@@ -1,20 +1,18 @@
 <div class="navbar-wagon navbar-wagon-fixed">
   <!-- Logo -->
-  <%= link_to image_tag('fovento-logo-long-blue.png'), root_path, id:"logo", class: "navbar-wagon-brand" %>
+  <%= link_to image_tag('VRConfident logo.png'), root_path, id:"logo", class: "navbar-wagon-brand" %>
 
   <!-- Right Navigation, hidden on mobile -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <!-- Text link -->
+    <%= link_to "INTRO", root_path, class: "navbar-wagon-item navbar-wagon-link"%>
+
     <%= link_to "PRODUCT", root_path, class: "navbar-wagon-item navbar-wagon-link"%>
 
-    <!-- Text link -->
     <%= link_to "FEATURES", root_path, class: "navbar-wagon-item navbar-wagon-link"%>
 
-    <!-- Text link -->
     <%= link_to "PRICING", root_path, class: "navbar-wagon-item navbar-wagon-link"%>
 
-    <!-- Text link -->
     <%= link_to "CONTACT", root_path, class: "navbar-wagon-item navbar-wagon-link" %>
   </div>
   <!-- end of right navigation -->
@@ -24,6 +22,7 @@
     <div class="dropdown">
       <i class="navicon fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><%= link_to "INTRO", root_path %></li>
         <li><%= link_to "PRODUCT", root_path %></li>
         <li><%= link_to "FEATURES", root_path %></li>
         <li><%= link_to "PRICING", root_path %></li>
