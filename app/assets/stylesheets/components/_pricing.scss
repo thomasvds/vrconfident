@@ -30,6 +30,27 @@
   position: relative;
   margin-bottom: 15px;
   /*margin-right: 11px;*/
+
+  ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 29px;
+  }
+  li {
+    margin-bottom: 15px;
+  }
+  .checkIcon {
+    font-family: "FontAwesome";
+    content: "\f00c";
+  }
+  li::before {
+    font-family: "FontAwesome";
+    content: "\f00c";
+    font-size: 1.3rem;
+    color: $secondary;
+    margin-right: 3px;
+  }
 }
 .package:hover {
   margin-top: -20px;
@@ -67,26 +88,7 @@ hr {
   position: relative;
   bottom: -10px;
 }
-ul {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  margin-top: 29px;
-}
-li {
-  margin-bottom: 15px;
-}
-.checkIcon {
-  font-family: "FontAwesome";
-  content: "\f00c";
-}
-li::before {
-  font-family: "FontAwesome";
-  content: "\f00c";
-  font-size: 1.3rem;
-  color: $secondary;
-  margin-right: 3px;
-}
+
 .brilliant {
   border-color: $secondary;
 }

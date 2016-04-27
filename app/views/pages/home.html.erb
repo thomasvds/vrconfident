@@ -8,7 +8,7 @@
 
 <!-- BANNER -->
 
-<div class="banner" style="background-image: linear-gradient(-200deg, rgba(0,0,0,0.1) 5%, rgba(0,0,0,0.6) 90%), url(http://s3-eu-west-1.amazonaws.com/vrconfident/VRConfident+-+public+speaking+virtual+reality+banner+1.jpg);">
+<div class="banner" style="background-image: linear-gradient(-200deg, rgba(0,0,0,0.1) 5%, rgba(0,0,0,0.6) 90%), url(http://s3-eu-west-1.amazonaws.com/vrconfident/VRConfident+-+public+speaking+virtual+reality+banner+resized.jpg);">
 
   <div class="banner-top"> </div>
 
@@ -17,7 +17,7 @@
   </div>
 
   <div class="banner-description">
-    <p id="intro">And let's admit it feels a bit scary at times. Now, what if Virtual Reality could help you train and boost your confidence in public speaking?</p>
+    <p id="intro">Let's admit public speaking can feel a bit scary at times. Now, what if Virtual Reality could help you train and boost your confidence?</p>
   </div>
 
   <div class="banner-bottom">
@@ -25,59 +25,63 @@
       <i class="fa fa-angle-down" id="scrollarrow"></i>
     </div>
   </div>
-  <div class="scrollanchor" id="scrollanchor"></div>
+  <div class="scrollanchor" id="product"></div>
 
 </div>
 
 <!---         WHAT               -->
-<div class="wrapper" id="whatid">
-  <div class="container text-center padded" >
+<div class="wrapper">
+  <div class="applybox" style="position: relative;">
+    <div class="container text-center padded" >
 
 
-    <div class="tagline"><h1>PUBLIC SPEAKING SKILLS TO THE NEXT LEVEL</h1></div>
-    <div class="row">
+      <div class="tagline" style="color: white;"><h1>PUBLIC SPEAKING SKILLS TO THE NEXT LEVEL</h1></div>
+      <div class="row">
 
-      <div class="col-xs-12 col-sm-4">
-        <div class="feature-holder">
-          <div class="feature">
-            <%= image_tag("immersive experience.png") %>
-            <h2>LIVE AN IMMERSIVE EXPERIENCE</h2>
-            <p>Virtual Reality recreates situations of public speaking, all in a 3D 360° view</p>
+        <div class="col-xs-12 col-sm-4">
+          <div class="feature-holder">
+            <div class="feature">
+              <%= image_tag("immersive experience.png") %>
+              <h2>LIVE AN IMMERSIVE EXPERIENCE</h2>
+              <p>Virtual Reality recreates situations of public speaking, all in a 3D 360° view</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-xs-12 col-sm-4">
-        <div class="feature-holder">
-          <div class="feature">
-            <%= image_tag("test-runs.png") %>
-            <h2>ENJOY AS MANY TEST-RUNS AS YOU WANT</h2>
-            <p>The public won't even get tired of it, promised! They're virtual anyway.</p>
+        <div class="col-xs-12 col-sm-4">
+          <div class="feature-holder">
+            <div class="feature">
+              <%= image_tag("test-runs.png") %>
+              <h2>ENJOY AS MANY TEST-RUNS AS YOU WANT</h2>
+              <p>The public won't even get tired of it, promised! They're virtual anyway.</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-xs-12 col-sm-4">
-        <div class="feature-holder">
-          <div class="feature">
-            <%= image_tag("experiment.png") %>
-            <h2>EXPERIMENT IT ALL TO GET CONFIDENT</h2>
-            <p>Train in all situations and settings. You'll finally deliver an incredible presentation!</p>
+        <div class="col-xs-12 col-sm-4">
+          <div class="feature-holder">
+            <div class="feature">
+              <%= image_tag("experiment.png") %>
+              <h2>EXPERIMENT IT ALL TO GET CONFIDENT</h2>
+              <p>Train in all situations and settings. You'll finally deliver an incredible presentation!</p>
+            </div>
           </div>
         </div>
+
+
+
+
       </div>
-
-
-
-
     </div>
+    <div style="position: absolute; bottom:70px;" id="howitworks"></div>
   </div>
 
-  <div class="wrapper">
+  <div class="wrapper" style="position: relative">
     <div class="container padded timelinewrapper">
       <div class="tagline"><h1>IT'S AS EASY AS 1, 2, 3</h1></div>
       <%= render 'pages/home/timeline' %>
     </div>
+    <div style="position: absolute; bottom:70px;" id="features"></div>
   </div>
 
   <div class="wrapper">
@@ -90,7 +94,7 @@
             <div class='package'>
               <div class='name'>Good</div>
               <div class='price'>€10 / month*</div>
-              <div class='trial'>Individuals</div>
+              <div class='trial'>Individual use</div>
 
               <ul>
                 <li>
@@ -169,13 +173,29 @@
     </div>
   </div>
 
-  <div class="wrapper">
-    <div class="applybox padded">
-      <div class="tagline" style="color: white;"><h1>INTERESTED? REGISTER NOW FOR A FREE TEST</h1></div>
+  <div class="wrapper" id="testit">
+    <div class="registerbox padded">
+      <div class="tagline"><h1>REGISTER AND BE THE FIRST TO TEST IT</h1></div>
       <div class="container">
+
+        <div class='form text-center'>
+
+          <%= simple_form_for @lead, :html => {:class => 'form-inline' }, url: register_path, method: :put do |f| %>
+          <%= f.input :name, label: 'Name', input_html: { class: 'special' }  %>
+          &nbsp;
+          <%= f.input :email, :required => true, input_html: { class: 'special' }  %>
+          &nbsp;
+          <%= f.input :business, label: '  I am a business' %>
+          <div>
+          </br>
+          <%= f.button :submit, 'REGISTER!', :class=> "btn btn-primary" %>
+          </div>
+          <% end %>
       </div>
+
     </div>
   </div>
+</div>
 </div>
 
 
@@ -189,7 +209,7 @@
   // Banner downarrow effects
   $("#scrollarrow").click(function() {
     $('html, body').animate({
-      scrollTop: $("#scrollanchor").offset().top
+      scrollTop: $("#product").offset().top
     }, 1500);
   });
   function pulse(){
