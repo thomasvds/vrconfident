@@ -34,93 +34,153 @@
   <div class="container text-center padded" >
 
 
-    <div class="tagline"><h2>VRConfident brings your public speaking abilities to the next level</h2></div>
+    <div class="tagline"><h1>PUBLIC SPEAKING SKILLS TO THE NEXT LEVEL</h1></div>
     <div class="row">
+
       <div class="col-xs-12 col-sm-4">
         <div class="feature-holder">
-          <div class= "flipcard">
-            <div class="front">
-              <div class="feature">
-                <%= image_tag("impact.png") %>
-                <h2>IMPACT</h2>
-                <p>Accomplis des missions avec des associations soutenant les causes qui t'inspirent</p>
-              </div>
-            </div>
-            <div class="back">
-              <div class="featureback">
-                <div class="figure">10+</div>
-                <%= image_tag("impactback.png") %>
-                <p>Soutiens plus d'une dizaine d'ASBLs,
-                  actives en Belgique et à Bruxelles en
-                  particulier</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-4">
-          <div class="feature-holder">
-            <div class= "flipcard">
-              <div class="front">
-                <div class="feature">
-                  <%= image_tag("technology.png") %>
-                  <h2>CHALLENGE</h2>
-                  <p>Les missions font appel au meilleur de tes compétences intellectuelles et humaines</p>
-                </div>
-              </div>
-              <div class="back">
-                <div class="featureback">
-                  <%= image_tag("challengeback.png") %>
-                  <p>Management, Comm', RH, Design, Finance, IT...toutes les compétences sont bienvenues!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-4">
-          <div class="feature-holder">
-            <div class= "flipcard">
-              <div class="front">
-                <div class="feature">
-                  <%= image_tag("arrows (1).png") %>
-                  <h2>FLEXIBILITÉ</h2>
-                  <p>Trouve des missions courtes à la demande, sans contraintes à long terme</p>
-                </div>
-              </div>
-              <div class="back">
-                <div class="featureback">
-                  <%= image_tag("timeback.png") %>
-                  <p>3 heures suffisent déjà! C'est moins que ton temps mensuel à regarder des photos de chats sur le web</p>
-                </div>
-              </div>
-            </div>
+          <div class="feature">
+            <%= image_tag("immersive experience.png") %>
+            <h2>LIVE AN IMMERSIVE EXPERIENCE</h2>
+            <p>Virtual Reality recreates situations of public speaking, all in a 3D 360° view</p>
           </div>
         </div>
       </div>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="feature-holder">
+          <div class="feature">
+            <%= image_tag("test-runs.png") %>
+            <h2>ENJOY AS MANY TEST-RUNS AS YOU WANT</h2>
+            <p>The public won't even get tired of it, promised! They're virtual anyway.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="feature-holder">
+          <div class="feature">
+            <%= image_tag("experiment.png") %>
+            <h2>EXPERIMENT IT ALL TO GET CONFIDENT</h2>
+            <p>Train in all situations and settings. You'll finally deliver an incredible presentation!</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
     </div>
   </div>
 
   <div class="wrapper">
     <div class="container padded timelinewrapper">
-      <div class="tagline"><h2>Un modèle simple et efficace</h2></div>
+      <div class="tagline"><h1>IT'S AS EASY AS 1, 2, 3</h1></div>
       <%= render 'pages/home/timeline' %>
     </div>
   </div>
 
   <div class="wrapper">
     <div class="applybox padded">
-      <div class="tagline" style="color: white;"><h1>QUEL SERA TON IMPACT?</h1></div>
-      <div class="btn-box">
-        <%= link_to 'VOIR LES MISSIONS', root_path, class: 'apply-btn btn' %>
+      <div class="tagline" style="color: white;"><h1>PACKED WITH FEATURES TO MAKE YOU BETTER</h1></div>
+      <div class="container">
+        <div class="row">
+
+          <div class="col-xs-12 col-sm-4" style="display:flex; justify-content: space-around;">
+            <div class='package'>
+              <div class='name'>Good</div>
+              <div class='price'>€10 / month*</div>
+              <div class='trial'>Individuals</div>
+
+              <ul>
+                <li>
+                  <strong>3</strong>
+                  standard scenes
+                </li>
+                <li>
+                  <strong>Unlimited</strong>
+                  number of runs
+                </li>
+                <li>
+                  <strong>Basic analytics</strong>
+                  tool suite
+                </li>
+                <li>
+                  <strong>1</strong>
+                  user
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-4" style="display:flex; justify-content: space-around;">
+            <div class='package brilliant'>
+              <div class='name'>Awesome</div>
+              <div class='price'>€500 / per month*</div>
+              <div class='trial'>Business</div>
+              <ul>
+                <li>
+                  <strong>5</strong>
+                  standard scenes
+                </li>
+                <li>
+                  <strong>Unlimited</strong>
+                  number of users
+                </li>
+                <li>
+                  <strong>Unlimited</strong>
+                  number of runs
+                </li>
+                <li>
+                  <strong>Virtual Reality</strong>
+                  headset
+                </li>
+                <li>
+                  <strong>Full analytics</strong>
+                  tools suite
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-4" style="display:flex; justify-content: space-around;">
+            <div class='package'>
+              <div class='name'>Epic</div>
+              <div class='price'>Price on request*</div>
+              <div class='trial'>Business</div>
+
+              <ul>
+                <li>
+                  <strong>All 'Awesome'</strong>
+                  features
+                </li>
+                <li>
+                  <strong>Custom</strong>
+                  speaking scenes
+                </li>
+                <li>
+                  <strong>Custom </strong>support
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
+  <div class="wrapper">
+    <div class="applybox padded">
+      <div class="tagline" style="color: white;"><h1>INTERESTED? REGISTER NOW FOR A FREE TEST</h1></div>
+      <div class="container">
+      </div>
+    </div>
+  </div>
+</div>
 
-  <% content_for :javascript do %>
-  <script>
+
+<% content_for :javascript do %>
+<script>
 
   // Title dynamic resizing
   $("#headline").fitText(0.8, { minFontSize: '40px', maxFontSize: '70px' });
@@ -139,11 +199,6 @@
     }
   }
   setInterval(pulse, 3000);
-
-  // Flipping of feature cards
-  $(".flipcard").flip({
-    trigger: 'click'
-  });
 
 </script>
 <% end %>
