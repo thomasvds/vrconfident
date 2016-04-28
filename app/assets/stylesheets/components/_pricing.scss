@@ -53,9 +53,9 @@
   }
 }
 .package:hover {
-  margin-top: -20px;
-  -webkit-transition: margin-top 0.3s linear;
-  transition: margin-top 0.3s linear;
+  margin-top: -5px;
+  -webkit-transition: margin-top 0.3s ease;
+  transition: margin-top 0.3s ease;
 }
 .name {
   color: white;

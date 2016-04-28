@@ -94,7 +94,7 @@
             <div class='package'>
               <div class='name'>Good</div>
               <div class='price'>€10 / month*</div>
-              <div class='trial'>Individual use</div>
+              <div class='trial'>Individuals - free trial</div>
 
               <ul>
                 <li>
@@ -121,7 +121,7 @@
             <div class='package brilliant'>
               <div class='name'>Awesome</div>
               <div class='price'>€200 / per week*</div>
-              <div class='trial'>Business</div>
+              <div class='trial'>Business - free trial</div>
               <ul>
                 <li>
                   <strong>5</strong>
@@ -151,7 +151,7 @@
             <div class='package'>
               <div class='name'>Epic</div>
               <div class='price'>Price on request*</div>
-              <div class='trial'>Business</div>
+              <div class='trial'>Business - free trial</div>
 
               <ul>
                 <li>
@@ -175,7 +175,9 @@
 
   <div class="wrapper" id="testit">
     <div class="registerbox padded">
-      <div class="tagline"><h1>REGISTER NOW AND GET A FREE TEST!</h1></div>
+      <div class="tagline"><h1>REGISTER NOW, BE IN THE KNOW</h1></div>
+      <div class="text-center" style="font-size: 18px;">You'll get to know about our latest product evolutions. Psst: you might also be the first to get your free trial!</div>
+      <br>
       <div class="container">
 
         <div class='form text-center'>
@@ -188,7 +190,7 @@
           <%= f.input :business, label: '  I am a business' %>
           <div>
           </br>
-          <%= f.button :submit, 'REGISTER', :class=> "btn btn-primary" %>
+          <%= f.button :submit, 'REGISTER!', :class=> "btn btn-primary" %>
           </div>
           <% end %>
       </div>
@@ -219,6 +221,11 @@
     }
   }
   setInterval(pulse, 3000);
+
+  $(".package").hover(function(){
+    $(".package").removeClass("brilliant");
+    $(this).toggleClass("brilliant");
+  });
 
 </script>
 <% end %>
